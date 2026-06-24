@@ -1,11 +1,7 @@
-import React from "react";
-
-const Icon = ({ symbol, label }) => {
-  return (
-    <span role="img" aria-label={label || "icon"} className="feature-icon">
-      {symbol}
-    </span>
-  );
-};
+function Icon({icon}) {
+    return (
+        <i>{icon}</i>
+    );
+}
 
 export default Icon;

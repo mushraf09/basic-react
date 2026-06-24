@@ -1,7 +1,8 @@
-import React from "react";
-import imgOur2 from "../assets/our 2.jpeg";
-import img5 from "../assets/5.jpeg";
-import img1 from "../assets/1.jpeg";
+import imgOur2 from "../../assets/2.avif";
+import img5 from "../../assets/5.webp";
+import img1 from "../../assets/1.avif";
+import Para from "../para"; 
+import Image from "../image";
 
 const articles = [
   {
@@ -36,15 +37,16 @@ const BlogSection = () => {
       <div className="blog-header">
         <span className="blog-label">Blog</span>
         <h2>News & Updates</h2>
-        <p>
+        < Para paragraph="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, explicabo, quasi. Magni deserunt sunt labore."/> 
+        {/* <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi,
           explicabo, quasi. Magni deserunt sunt labore.
-        </p>
+        </p> */}
       </div>
       <div className="blog-grid">
         {articles.map((article) => (
           <article key={article.author + article.title} className="blog-card">
-            <img src={article.image} alt={article.title} />
+            <Image image={article.image} alt={article.title} />
             <div className="blog-card-body">
               <h3>{article.title}</h3>
               <p className="blog-meta">

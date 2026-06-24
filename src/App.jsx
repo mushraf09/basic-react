@@ -1,16 +1,15 @@
-import React from "react";
-import FeaturesSection from "./components/feature";
-import BlogSection from "./components/blog";
-import "./style.css";
-import "./App.css";
-import "./components/feature/index.css";
 
+import BlogSection from "./components/blog";
+import FeaturesSection from "./components/feature";
+import FeaturedProjects from "./components/featured-projects";
+import "./style.css";
 
 function App() {
   return (
     <div className="app-container">
       <FeaturesSection />
       <BlogSection />
+      <FeaturedProjects />
     </div>
   );
 }

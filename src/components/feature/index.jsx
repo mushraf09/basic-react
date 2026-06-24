@@ -1,35 +1,30 @@
-import React from "react";
-import FeatureCard from "../card";
 import Heading2 from "../h2";
 import Heading5 from "../h5";
+import FeatureCard from "../card";
+import { FaTools, FaKey, FaPencilAlt, FaPaperPlane, FaFlag, FaBullseye } from "react-icons/fa";
 
-const features = [
-  { icon: "🌕", title: "Expert Technicians", iconBg: "#eef5ff" },
-  { icon: "📍", title: "Professional Service", iconBg: "#fff3f7" },
-  { icon: "✏️", title: "Great Support", highlighted: true, iconBg: "rgba(255,255,255,0.2)" },
-  { icon: "💡", title: "Expert Technicians", iconBg: "#f7f8ff" },
-  { icon: "🚩", title: "Professional Service", iconBg: "#effcf7" },
-  { icon: "🎯", title: "Great Support", iconBg: "#fff8eb" },
+const defaultFeatures = [
+  { id: "feat-1", icon: <FaTools />, heading: "Expert Technicians" },
+  { id: "feat-2", icon: <FaKey />, heading: "Professional Service" },
+  { id: "feat-3", icon: <FaPencilAlt />, heading: "Great Support" },
+  { id: "feat-4", icon: <FaPaperPlane />, heading: "Expert Technicians" },
+  { id: "feat-5", icon: <FaFlag />, heading: "Professional Service" },
+  { id: "feat-6", icon: <FaBullseye />, heading: "Great Support" },
 ];
 
-const FeaturesSection = () => {
+function FeaturesSection({ heading = "Some Features that Made us Unique", subheading = "Who are in extremely love with eco friendly system.", features = defaultFeatures }) {
   return (
     <section className="features-section">
-      <Heading2 heading="Some Features that Made us Unique" />
-      <Heading5 text="Who are in extremely love with eco friendly system." />
+      <Heading2 heading={heading} />
+      <Heading5 heading={subheading} />
+
       <div className="features-grid">
-        {features.map((feature) => (
-          <FeatureCard
-            key={feature.title}
-            icon={feature.icon}
-            title={feature.title}
-            highlighted={feature.highlighted}
-            iconBg={feature.iconBg}
-          />
+        {features.map((f) => (
+          <FeatureCard key={f.id || f.heading} feature={f} />
         ))}
       </div>
     </section>
   );
-};
+}
 
 export default FeaturesSection;

@@ -1,14 +1,14 @@
-import React from "react";
+import React, { memo } from "react";
 
-const FeatureCard = ({ icon, title, highlighted, iconBg }) => {
+function FeatureCard({ feature }) {
+  const className = feature.highlighted ? "feature-card highlighted" : "feature-card";
+
   return (
-    <div className={`feature-card ${highlighted ? "highlighted" : ""}`}>
-      <div className="feature-icon" style={{ background: iconBg }}>
-        {icon}
-      </div>
-      <h3 className="feature-title">{title}</h3>
+    <div className={className}>
+      <div className="feature-icon">{feature.icon}</div>
+      <h3 className="feature-title">{feature.heading}</h3>
     </div>
   );
-};
+}
 
-export default FeatureCard;
+export default memo(FeatureCard);
