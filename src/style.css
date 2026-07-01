@@ -220,6 +220,155 @@ body {
   text-decoration: none;
 }
 
+.student-form {
+  width: min(620px, 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  box-shadow: 0 32px 80px rgba(59, 130, 246, 0.08);
+  border-radius: 30px;
+  padding: 32px;
+}
+
+.student-form__header {
+  margin-bottom: 26px;
+}
+
+.student-form__badge {
+  display: inline-flex;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #1d4ed8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.student-form__title {
+  margin: 0;
+  font-size: clamp(1.55rem, 2vw, 1.95rem);
+  color: #0f172a;
+}
+
+.student-form__subtitle {
+  margin: 12px 0 0;
+  color: #475569;
+  line-height: 1.75;
+}
+
+.student-form__fields {
+  display: grid;
+  gap: 18px;
+}
+
+.student-form__label {
+  display: grid;
+  gap: 0.6rem;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.student-form__input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 18px;
+  padding: 0.95rem 1rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+  background: #f8fafc;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.student-form__input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.student-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.student-form__button {
+  min-width: 120px;
+  padding: 0.95rem 1.2rem;
+  border-radius: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.student-form__button--primary {
+  background: #2563eb;
+  color: white;
+}
+
+.student-form__button--secondary {
+  background: white;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.student-form__button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.18);
+}
+
+.student-form__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.student-form__message {
+  margin-top: 20px;
+  padding: 1rem 1.1rem;
+  border-radius: 16px;
+  background: #ecfdf5;
+  color: #14532d;
+  border: 1px solid #bbf7d0;
+  font-weight: 600;
+}
+
+.student-details {
+  margin-top: 30px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 24px;
+}
+
+.student-details__title {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.student-details__grid {
+  display: grid;
+  gap: 12px;
+}
+
+.student-details__grid p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.student-details__grid strong {
+  color: #0f172a;
+}
+
+.student-details__empty {
+  margin: 0;
+  color: #64748b;
+}
+
+
+
 .project-link:hover {
   text-decoration: underline;
 }
